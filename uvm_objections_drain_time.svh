@@ -197,6 +197,9 @@ class base_test extends uvm_test;
     phase.raise_objection(this);
     
     objection.get_objection_total();
+   
+    phase.phase_done.set_drain_time(this,100);
+   
     #500;
     
     phase.drop_objection(this);
